@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div align="center" style="background-color: bisque;">
+        <form>
+            <label for="nome">Nome</label> <br>
+            <input type="text" name="nome" id="nome" required placeholder="Informe o nome" /> <br>
+
+            <label for="email">Email</label> <br>
+            <input type="text" name="email" id="email" required placeholder="Informe o E-mail" /> <br>
+
+            <label for="telefone">Telefone</label> <br>
+            <input type="text" name="telefone" id="telefone" required placeholder="Informe o telefone" /> <br>
+
+            <label for="CPF">CPF</label> <br>
+            <input type="text" name="cpf" id="cpf" required placeholder="Informe o CPF" /> <br>
+            <button>
+                <input onClick="salvar()" type="submit" name="enviar" id="enviar" value="Enviar">
+                <a href="C:\Projetos_Programacao\Programação\JavaScript\JavaScriptUNIESP\aula_01.html"></a>
+                <input type="reset" name="limpar" id="limpar" value="Limpar">
+            </button>
+        </form>
+    </div>
+</body>
+<script>
+    var nome = document.querySelector('#nome');
+    var email = document.querySelector('#email');
+    var telefone = document.querySelector('#telefone');
+    var cpf = document.querySelector('#cpf');
+
+    console.log(nome, email, telefone, cpf);
+
+    const campos = [nome, email, telefone, cpf]
+
+    console.log(">>>> TAMANHO DO ARRAY " + campos.length);
+
+    /*
+    const salvar = () => {
+        console.log(nome.value);
+        console.log(email.value);
+        console.log(telefone.value);
+        console.log(cpf.value);
+        event.preventDefault(stop);
+    }
+    */
+
+    let usuarios = []
+    const addUsuario = () => {
+        event.preventDefault()
+        var usuario = {
+            nome: nome.value,
+            email: email.value,
+            telefone: telefone.value
+        }
+        localStorage.setItem('usuario', usuario)
+
+        //usuarios.push(usuarios)
+        //console.log(usuarios)
+    }
+
+    /*
+    console.log(usuario);
+    var usuario = {}
+    const mostraValores = () => {
+        campos.forEach(e => {
+            usuario = {
+                nome: e.value,
+                email: e.value,
+                telefone: e.value
+            }
+        });
+
+        console.log(usuario);
+        localStorage.setItem('usuario', usuario);
+        event.preventDefault();
+    }
+    /*
+    function teste(event) {
+        alert('TESTE');
+    }
+    */
+</script>
+
+</html>
