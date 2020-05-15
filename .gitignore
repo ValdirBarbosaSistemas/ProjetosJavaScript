@@ -1,0 +1,4 @@
+#Arquivos que serão ignorados pelo Git
+
+.settings/
+*.project
