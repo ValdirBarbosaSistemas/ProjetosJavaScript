@@ -10,7 +10,7 @@ header {
     background-color: blanchedalmond;
     padding: 10px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     color: black;
 }
 
@@ -22,8 +22,8 @@ section::after {
 
 nav {
     float: left;
-    width: 30%;
-    height: 300px;
+    width: 20%;
+    height: 180px;
     background-color: darkgreen;
     padding: 20px;
 }
@@ -41,7 +41,7 @@ nav ul {
 article {
     float: left;
     padding: 20px;
-    width: 70%;
+    width: 80%;
     background-color: cornsilk;
     height: 300px;
 }
