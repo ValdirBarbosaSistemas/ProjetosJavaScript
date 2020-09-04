@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div align="left">
+        <form action="POST">
+            <label for="login">Login</label> <br>
+            <input type="text" name="login" id="login_tx" placeholder="Informe o seu login" required/> <br>
+            <br>
+            <label for="senha">Senha</label> <br>
+            <input type="password" name="senha" id="senha_tx" placeholder="Informe sua senha" required/> <br><br>
+            <label for="nome">Lembre-me</label><br>
+            <input type="checkbox" value="lembrarSenha" name="lembrar"><br>
+            <a href="enviar_email.html">Esqueceu a senha?</a><br>
+            <br>
+            <button>
+                <input onClick="enviarDados" type="submit" name="enviarDados" id="enviar_tx" value="Enviar">
+                <input type="reset" name="limpar" id="limpar_tx" value="Limpar">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
