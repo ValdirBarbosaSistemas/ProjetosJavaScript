@@ -6,14 +6,19 @@
     <title>Aula01_JS</title>
   </head>
   <body>
-    <button onclick="document.getElementById('lampada').src='pic_bulbon.gif'" id="ligar">
+    <button onclick="ligar()" id="ligar">
     </button>
 
-    <img src="pic_bulboff.gif" alt="lampada" id="lampada" style="width: 100px" />
+    <img src="pic_bulboff.gif" alt="lampada" id="lampada" style="width: 100px"/>
 
-    <button onclick="document.getElementById('lampada').src='pic_bulboff.gif'" id="desligar">
+    <button onclick="alerta()" id="desligar">
     </button>
 
+    <script>
+      function alerta(){
+        alert("Estou chamando essa função");
+      }
+    </script>
     <script src="meujs.js"></script>
   </body>
 </html>
