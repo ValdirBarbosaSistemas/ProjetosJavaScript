@@ -1,7 +1,9 @@
+"use strict";
+
 var numero = 1;
 {
-  let numero = 2;
-  console.log("dentro...", numero);
+  var _numero = 2;
+  console.log("dentro...", _numero);
 }
 console.log("fora...", numero);
 /* Neste caso, o 'let' ele ficará visível dentro do bloco, ou seja, será impresso na tela o valor de let = 2 
