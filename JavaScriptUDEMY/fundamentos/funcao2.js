@@ -1,5 +1,5 @@
 // Armazenando uma função em uma VARIÁVEL
-const imprimirSoma = function (a, b) {
+const imprimirSoma = function (a, b) { //Função anônima
     console.log(a + b)
 }
 
@@ -19,6 +19,6 @@ const subtracao = (a, b) => a - b
 // neste caso como é uma sentença de código de apenas uma linha, não é necessário as '{}'
 console.log(subtracao(2, 3))
 
-//Pode-se diminuir o arrow function ainda mais....
+//Caso seja somente 1 parâmetro, pode-se diminuir o arrow function ainda mais....
 const imprimir2 = a => console.log(a)
 imprimir2('Legaaaaaal!!!')
