@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="calc" action="">
+      <label for="valor1">Valor1</label>
+      <input type="text" name="valor1" id="valor1" />
+      <br />
+      <label for="valor1">Valor2</label>
+      <input type="text" name="valor2" id="valor2" />
+      <br />
+      <br />
+      <label for="op">Selecione a operação</label>
+      <select name="op" id="op">
+        <option value="somar">Somar</option>
+        <option value="sub">Subtrair</option>
+        <option value="div">Dividir</option>
+        <option value="mult">Multiplicar</option>
+      </select>
+      <br />
+      <br />
+      <label for="resultado">Resultado</label>
+      <br />
+      <input type="text" name="resultado" id="resultado" />
+      <br />
+      <br />
+      <input
+        type="button"
+        value="Calcular"
+        onclick="calcula(document.calc.op.value)"
+      />
+    </form>
+    <script>
+      function calcula(dadoSelecao) {
+        var valor1 = document.calc.valor1.value;
+        var valor2 = document.calc.valor2.value;
+
+        if (dadoSelecao == "somar") {
+          resultado = parseInt(valor1) + parseInt(valor2);
+        } else {
+          if (dadoSelecao == "sub") {
+            resultado = valor1 - valor2;
+          } else {
+            if (dadoSelecao == "mult") {
+              resultado = valor1 * valor2;
+            } else {
+              if (dadoSelecao == "div") {
+                resultado = valor1 / valor2;
+              }
+            }
+          }
+        }
+        document.calc.resultado.value = resultado;
+      }
+    </script>
+  </body>
+</html>
