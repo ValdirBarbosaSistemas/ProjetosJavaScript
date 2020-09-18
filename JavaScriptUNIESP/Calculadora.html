@@ -10,7 +10,7 @@
       <label for="valor1">Valor1</label>
       <input type="text" name="valor1" id="valor1" />
       <br />
-      <label for="valor1">Valor2</label>
+      <label for="valor2">Valor2</label>
       <input type="text" name="valor2" id="valor2" />
       <br />
       <br />
@@ -27,34 +27,35 @@
       <br />
       <input type="text" name="resultado" id="resultado" />
       <br />
-      <br />
-      <input
-        type="button"
-        value="Calcular"
-        onclick="calcula(document.calc.op.value)"
-      />
+      <br /> 
+      <input type="button" value="Calcular" onclick="calcula(document.calc.op.value)" />
+      <!--Aqui ele ta chamando pelo botão 'Calcular' a função criada logo abaixo (calcula) e através
+      do 'document' ele chama o valor do formulário 'entrando' pelo valor da seleção 'op' e 
+      pegando os valores do mesmo -->
     </form>
     <script>
-      function calcula(dadoSelecao) {
-        var valor1 = document.calc.valor1.value;
-        var valor2 = document.calc.valor2.value;
+      function calcula(dadoSelecao){ 
+      // Declaração da função e recebendo como parâmetro o dado da seleção do navegador 
+        var v1 = document.calc.valor1.value; // Declaração da variável e recebendo do 'document' os valores do formulário
+        var v2 = document.calc.valor2.value;
 
         if (dadoSelecao == "somar") {
-          resultado = parseInt(valor1) + parseInt(valor2);
+          resultado = parseInt(v1) + parseInt(v2); 
+          // Aqui ele usa o parse pois o valor no formulário está como String, daí a conversão para não haver concatenação
         } else {
           if (dadoSelecao == "sub") {
-            resultado = valor1 - valor2;
+            resultado = v1 - v2;
           } else {
             if (dadoSelecao == "mult") {
-              resultado = valor1 * valor2;
+              resultado = v1 * v2;
             } else {
               if (dadoSelecao == "div") {
-                resultado = valor1 / valor2;
+                resultado = v1 / v2;
               }
             }
           }
         }
-        document.calc.resultado.value = resultado;
+        document.calc.resultado.value = resultado; // Mostrando no html a variável 'resultado'
       }
     </script>
   </body>
