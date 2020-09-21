@@ -40,7 +40,7 @@
         var v2 = document.calc.valor2.value;
 
         if (dadoSelecao == "somar") {
-          resultado = parseInt(v1) + parseInt(v2); 
+          resultado = parseFloat(v1) + parseFloat(v2); 
           // Aqui ele usa o parse pois o valor no formulário está como String, daí a conversão para não haver concatenação
         } else {
           if (dadoSelecao == "sub") {
