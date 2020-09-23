@@ -27,20 +27,40 @@
       <br />
       <input type="text" name="resultado" id="resultado" />
       <br />
-      <br /> 
-      <input type="button" value="Calcular" onclick="calcula(document.calc.op.value)" />
+      <br />
+      <input
+        type="button"
+        value="Calcular"
+        onclick="calcula(document.calc.op.value)"
+      />
       <!--Aqui ele ta chamando pelo botão 'Calcular' a função criada logo abaixo (calcula) e através
       do 'document' ele chama o valor do formulário 'entrando' pelo valor da seleção 'op' e 
       pegando os valores do mesmo -->
     </form>
     <script>
-      function calcula(dadoSelecao){ 
-      // Declaração da função e recebendo como parâmetro o dado da seleção do navegador 
+      function calcula(dadoSelecao) {
+        // Declaração da função e recebendo como parâmetro o dado da seleção do navegador
         var v1 = document.calc.valor1.value; // Declaração da variável e recebendo do 'document' os valores do formulário
         var v2 = document.calc.valor2.value;
 
+        switch (dadoSelecao) {
+          case "somar":
+            resultado = parseFloat(v1) + parseFloat(v2);
+            break;
+          case "sub":
+            resultado = v1 - v2;
+            break;
+          case "mult":
+            resultado = v1 * v2;
+            break;
+          case "div":
+            resultado = v1 / v2;
+            break;
+        }
+
+        /*
         if (dadoSelecao == "somar") {
-          resultado = parseFloat(v1) + parseFloat(v2); 
+          resultado = parseFloat(v1) + parseFloat(v2);
           // Aqui ele usa o parse pois o valor no formulário está como String, daí a conversão para não haver concatenação
         } else {
           if (dadoSelecao == "sub") {
@@ -54,7 +74,7 @@
               }
             }
           }
-        }
+        } */
         document.calc.resultado.value = resultado; // Mostrando no html a variável 'resultado'
       }
     </script>
