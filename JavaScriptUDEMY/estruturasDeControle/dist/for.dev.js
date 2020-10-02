@@ -11,12 +11,12 @@ while (contador <= 10) {
 E DEPOIS O INCREMENTO SEPARADOS POR ';')*/
 
 
-for (var _i = 1; _i <= 10; _i++) {
-  console.log("Contador do FOR: ".concat(_i));
+for (var i = 1; i <= 10; i++) {
+  console.log("Contador do FOR: ".concat(i));
 }
 
 var notas = [6.7, 7.4, 9.8, 8.1, 7.7];
 
-for (i = 0; i = notas.length; i++) {
-  console.log("For com array: ".concat(notas[i]));
+for (var _i = 0; _i < notas.length; _i++) {
+  console.log("For com array: ".concat(notas[_i]));
 }
