@@ -6,12 +6,16 @@
     <title>Document</title>
   </head>
   <body>
-    <form id="DadosUsuario">
-      Nome do Funcionário<input type="text" id="nomeFuncionario" placeholder="Digite o nome do funcionário" /> <br> <br>
-      Digite o salário do funcionário<input type="text" id="salarioFuncionario" placeholder="Digite o nome do usuário" /> <br> <br>
-      <button onclick="calculaSalarioFunc()">Resultado do cálculo</button>
-      <span id = "salarioNovo"></span>
-    </form>
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" name="nome" id="nomeFuncionario"> <br><br>
+    
+    <label for="salario">Digite o salário:</label>
+    <input type="text" name="salario" id="salarioFuncionario"> <br><br>
+    
+    <label for="Resultado">Resultado</label>
+    <input type="text" name="Resultado" id="resultado"> <br><br>
+    <button onclick ="calculaSalarioFunc()"> Resultado </button>
+
     <script src="Prova02.js"></script>
   </body>
 </html>
