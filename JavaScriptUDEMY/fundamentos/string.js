@@ -9,4 +9,4 @@ console.log('Escola '.concat(escola).concat("!!!")) /* Irá concatenar o que qui
 O valor que quer concatenar 'Escola' na variável escola e outro valor '!!!' também na mesma variável                                                     
 */ 
 console.log(escola.replace(3, 'e')) // Irá substituir o valor do índice 3 pela letra 'e'
-console.log('Ana. Maria, Pedro'.split(',')) // Aqui ele vai gerar um ARRAY e separar por vírgulas
+console.log('Ana, Maria, Pedro'.split(',')) // Aqui ele vai gerar um ARRAY e separar por vírgulas
