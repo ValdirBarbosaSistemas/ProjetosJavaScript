@@ -1,4 +1,4 @@
-//pessoa -> 123 -> {...}
+//pessoa -> 123 -> {...} ENDEREÇO DE MEMÓRIA
 const pessoa = { nome: "João" };
 pessoa.nome = "Pedro";
 console.log(pessoa); //Aqui o resultado será {Pedro}
