@@ -15,3 +15,6 @@ console.log(valores);
 
 console.log(typeof valores); //irá dizer o tipo do array
 //No javascript o array é do tipo OBJECT
+
+valores.unshift //Colocar elemento no começo do array
+valores.shift //Colocar elemento no final do array

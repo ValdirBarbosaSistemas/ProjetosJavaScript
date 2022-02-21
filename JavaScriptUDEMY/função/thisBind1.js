@@ -11,7 +11,7 @@ const falar = pessoa.falar //Voce pode armazenar a chamada da função em uma va
 falar() /*Neste caso a saudacao está apontando para um THIS diferente 
 do que está no objeto pessoa CONFLITO ENTRE PARADIGMAS (FUNCIONAL E OO)*/
 
-/*No caso do 'bind' traduzido significa (ligar/vincular). Ele recebe um OBJETO no qua voce quer
+/*No caso do 'bind' traduzido significa (ligar/vincular). Ele recebe um OBJETO no qual voce quer
 que seja resolvido o this*/
 const falarDePessoa = pessoa.falar.bind(pessoa)
 falarDePessoa()//Ele vai dar certo

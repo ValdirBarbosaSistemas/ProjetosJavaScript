@@ -8,7 +8,7 @@
 function Carro(velocidadeMaxima = 200, delta = 5) { //RECEBENDO COMO PARÂMETRO VALORES PADRÃO
 
     //atributo privado
-    let velocidadeAtual = 0; //PARA DECLARAÇÃO DE ATRIBUTO PRIVADO USA-SE A PALAVRA 'LET' E PARA ATRIBUTO PÚBLICO 'THIS'
+    let velocidadeAtual = 0; //PARA DECLARAÇÃO DE ATRIBUTO PRIVADO USA-SE A PALAVRA 'LET' ou 'CONST' E PARA ATRIBUTO PÚBLICO 'THIS'
 
     //metodos publicos
     this.acelerar = function () { //PARA DECLARAÇÃO DE MÉTODO PÚBLICO USA-SE A PALAVRA THIS
@@ -35,4 +35,4 @@ ferrari.acelerar();
 console.log(ferrari.getVelocidadeAtual());
 
 console.log(typeof Carro); //Aqui sera uma function
-console.log(typeof ferrari); //Aqui sera ym object
+console.log(typeof ferrari); //Aqui sera um object

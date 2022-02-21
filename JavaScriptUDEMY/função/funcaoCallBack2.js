@@ -10,8 +10,8 @@ for (let i in notas) {
 console.log(notasBaixas);
 
 //COM CALLBACK
-const notasBaixas2 = notas.filter(function (a) {
-  return a < 7;
+const notasBaixas2 = notas.filter(function (nota) {
+  return nota < 7;
 });
 console.log(notasBaixas2);
 
