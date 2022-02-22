@@ -6,7 +6,7 @@ const avo = {
 };
 
 const pai = {
-  __prot__: avo, //Recebendo os dados do avo através da palavra '__proto__'
+  __prot__: avo, //Recebendo os dados do avo através da palavra '__proto__', pois é dessa forma que se pega as informações da "classe pai"
   attr2: "B",
   attr: "3",
 };
@@ -14,9 +14,9 @@ const pai = {
 const filho = {
   __prot__: pai,
   attr3: "C",
-}; //attr3 = conceito de "sombreamento" || sobrescrita
+}; //attr3 = conceito de "sombreamento" || sobrescrita (ele vai imprimir o valor "C", pois foi o primeiro que ele encontrou)
 
-console.log(filho.attr); //Vai imprimir o valor '0'
+console.log(filho.attr); //Vai imprimir o valor '0' do Object, pois quando ele ver que não tem no pai e nem no avô, ele vai procurar no object que no caso é o "attr"
 console.log(pai.attr1); //Vai imprimir os dados do avo
 
 const carro = {
@@ -43,11 +43,12 @@ const ferrari2 = {
 const volvo2 = {
   modelo: "V40",
   status() {
-    return `${this.modelo}: ${super.status()}`; //'super'...Referenciar um método criado pelo protótipo
+    return `${this.modelo}: ${super.status()}`; //'super'...Referenciar um método criado pelo protótipo, ou seja, ele ta chamando o status que foi criado desde o início
+    //No "this.modelo" acima, ele ta referenciando o modelo feito pelo VOLVO. Lógico que se ele não encontrar, ele irá "procurar" nos protótipos acima dele
   },
 };
 
-Object.setPrototypeOf(ferrari2, carro); //Outra forma de se criar/declarar um protótipo
+Object.setPrototypeOf(ferrari2, carro); //Outra forma de se criar/declarar um protótipo(1 - É o objeto, e o 2 - É o protótipo que irá ser setado)
 Object.setPrototypeOf(volvo2, carro);
 /*Aqui temos uma outra forma de declarar prototype, que no caso é usando o método 'setPrototypeOf'
  *que no caso só se usa com o 'Object'. Recebe 2 parâmetros, um é o nome do objeto e o outro é o nome

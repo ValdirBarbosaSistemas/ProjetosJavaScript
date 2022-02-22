@@ -6,7 +6,8 @@ filha1.nome = "Ana"; //Aqui alterou o nome
 console.log(filha1.corCabelo); //Aqui irá mostrar a cor PRETA
 
 const filha2 = Object.create(pai, {
-  nome: { value: "Bia", writable: false, enumerable: true },
+  nome: { value: "Bia", writable: false, enumerable: true }, 
+  //writable, quer dizer se tem como fazer escrita, que no caso está FALSE, ou seja, não pode sobrescrever (NÃO VAI ACEITAR SER MUDADO)
 });
 
 console.log(filha2.nome); //Irá aparecer BIA
