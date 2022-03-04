@@ -1,0 +1,28 @@
+Para se criar um projeto NODE em seu projeto atual, basta
+inserir pelo terminal a palavra chave "npm init" que ele irá
+gerar um novo projeto NODE em sua aplicação. Caso queira criar
+sem fazer as perguntas que o wizard faz, basta add no terminal
+a palavra "npm init -y" que ele irá "passar direto" e construirá
+o projeto com os valores padrão. Sabemos também que para gerar 
+dependencias no node, usamos a palavra "npm i" que ele irá salvar 
+na pasta "node_modules", PORÉM existe outra forma de fazer isso...
+usando o comando "npm i --save [nome da dependencia]" irá instalar a dependencia na
+pasta "node_modules" como também irá criar no arquivo "package.json"
+as dependencias criadas
+    O "package-lock.json" serve para dizer que toda a configuração foi
+realizada/criada através dos dados que estão nesses arquivos, ou seja,
+mesmo que ele tivesse com a configuração da dependencia para atualizar
+sempre (como mostra o código abaixo), ele só irá configurar seu projeto
+de acordo com as configurações do "package-lock.json".
+
+"dependencies": {
+    "axios": "^0.26.0"
+  }
+Como exemplo o código acima, ele diz que o acento '^' quer dizer que
+a versão da dependencia será atualizada de maneira automática, PORÉM,
+só irá atualizar pelo "MINOR", ou seja, ele não atualiza para a versão
+1.0.0, ele só vai atualizar 0.28.0 por exemplo. Quando se tem o acento '~' 
+quer dizer que ele só irá atualizar o "FIX", ou seja, só a numeração do
+lado direito da versão da dependencia. E se caso não tiver nada ele não 
+irá ser atualizado, ou seja, só irá rodar a versão atual da dependencia.
+(MAIJOR, MINOR, FIX) = ESQUERDO - MEIO - DIREITO
