@@ -1,0 +1,9 @@
+Neste projeto do EXPRESS utilizamos os chamados abaixo
+  npm install -y --save para a criação da pasta 'node_modules'
+Criamos também o EXPRESS para utilizarmos na criação das API's do backend
+  npm install -y --save -dev express@4.16.2 -E (que é para utilizarmos a
+versão da biblioteca sem precisar atualizar nada). Colocamos também a
+nomenclatura '-E' que diz que vai ser a versão EXATA da biblioteca.
+Quando colocamos -Y ele vai instalar as dependencias de forma padrão
+do node confirmando SIM pra tudo. Lembrando também que quando colocamos
+a nomenclatura --dev, quer dizer que será instalado no ambiente de desenvolvimento.

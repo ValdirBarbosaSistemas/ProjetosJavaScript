@@ -26,7 +26,8 @@ for (let key in filha2) {
 }
 
 /**writable = não vai aceitar ser mudado, FINAL
- * enumerable = quer dizer que ele irá permitir alterações
+ * enumerable = quer dizer que ele irá permitir
+ * ser listado
  */
 
 /**

@@ -29,3 +29,8 @@ console.log(algunsPilotos1);
 
 const algunsPilotos2 = pilotos.slice(1, 4); //Aqui ele vai gerar um novo array através do índice 1 até o índice 4 não mostrando o elemento 4
 console.log(algunsPilotos2);
+
+aprovados = ['Bia', 'Carlos', 'Paulo'];
+aprovados.sort(); // Ordena o array por ordem Alfabética
+
+delete aprovados[0]; // Remove pelo índice

@@ -11,7 +11,7 @@ class Pai extends Avo {
   }
 }
 
-class Filho {
+class Filho extends Pai{
   constructor() {
     super("Silva");
   }

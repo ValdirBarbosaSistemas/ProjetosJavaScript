@@ -1,7 +1,14 @@
 //Agora vamos importar os módulos criados pelo nodeJS
 
-const moduloA = require("./moduloA"); //Dessa forma acessamos os arquivos (VER PHP, pois é bem parecido)
+const moduloA = require("./moduloA");
+const moduloB = require("./moduloB"); //Dessa forma acessamos os arquivos (VER PHP, pois é bem parecido)
 
+console.log(moduloA.ola);
+console.log(moduloA.bemVindo);
+console.log(moduloA.ateLogo);
+
+console.log(moduloB.bomdia);
+console.log(moduloB.boaNoite);
 /**
  * NPM = GERENCIADOR DE DEPENDÊNCIAS DO NODE. É COM ELE
  * QUE INSTALAMOS QUALQUER BIBLIOTECA DE TERCEIROS QUE

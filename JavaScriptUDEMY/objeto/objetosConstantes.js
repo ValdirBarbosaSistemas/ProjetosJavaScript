@@ -3,8 +3,12 @@ const pessoa = { nome: "João" };
 pessoa.nome = "Pedro";
 console.log(pessoa); //Aqui o resultado será {Pedro}
 
-/**Em objetos, pode-se mudar um conteúdo de sua variável mesmo estando constante.
- * Para se ter um "objeto constante" tem que se usar o método "Freeze";
+/**Em objetos, pode-se mudar um conteúdo de sua variável. O que não muda
+ * é a sua declaração de variável, ou seja, o nome da variável pessoa 
+ * (que é uma constante) não muda. Porém o seu conteúdo que no caso é
+ * um objeto, pode ser modificado. Para se ter um "objeto constante" 
+ * tem que se usar o método "Freeze"; Pois com ele o conteúdo do objeto
+ * não será mudado.
  */
 Object.freeze(pessoa);
 

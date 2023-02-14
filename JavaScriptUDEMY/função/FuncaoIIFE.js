@@ -1,4 +1,4 @@
-//IIFE = Significa Emmediately Invoked Function Expression
+//IIFE = Significa Immediately Invoked Function Expression
 
 (function () {
   console.log("Será executado na hora");
