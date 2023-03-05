@@ -1,5 +1,17 @@
 class Avo {
-  constructor(sobrenome) {
+
+  //Atributos privados
+
+  #nome
+  #idade
+
+  //outra forma de formular atributos privados
+  _nome2 = Symbol("nome");
+
+  constructor(nome, nome2, idade, sobrenome) {
+    this.#nome = nome
+    this[_nome2] = nome2 //outra forma de usar atributos privados
+    this.#idade = idade
     this.sobrenome = sobrenome;
   }
 }
