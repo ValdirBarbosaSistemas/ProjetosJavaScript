@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>              
+        
+        document.getElementById('primeiro').classList.add('destaque');
+        //Pegando o elemento pelo id dito na tag div e pegando também a manipulacao do CSS "destaque"
+        
+        const divs = document.getElementsByTagName('div'); //pegando TODOS os elementos da tag div e devido a isso retorna uma lista
+        Array.from(divs).forEach(e => e.classList.remove('destaque'));
+        /*
+        OBS: HA UMA FUNCAO CHAMADA dir() QUE SO RODA NO CONSOLE DO NAVEGADOR, E ELA MOSTRA QUAL O TIPO DE CONTEUDO
+        QUE CONSTA EM UMA VARIAVEL, QUE NO CASO DA "divs" ELA RETORNA UM "HTML COLLECTION" E HA ALGUMAS COISAS QUE
+        NAO TEM COMO MANIPULAR/FAZER NO HTML COLLECTIONS E PARA RESOLVER ISSO TEMOS QUE TRANSFORMAR EM ARRAY COMO
+        E MOSTRADO NO CODIGO ACIMA. ALI ELE TA TRANSFORMANDO EM ARRAY E APOS ISSO FAZENDO UM FOREACH PARA PERCORRER
+        O ARRAY E REMOVER TODA A CONFIGURACAO DO CSS "destaque" */
+        const divsArray = [...divs] //OUTRA FORMA DE TRANSFORMAR O HTML COLLECTION EM ARRAY E PELO SPREAD
+        divsArray.forEach(e => e.classList.add('destaque'))//AGORA TODOS OS ELEMENTOS IRAO TER O DESTAQUE 
+
+        const ultimosElementos = document.getElementsByClassName('ultimo');
+        for(let e of ultimosElementos){
+            e.classList.remove('destaque')//Aqui como nao queremos transformar o html collections em array, a unica solucao seria usar o for of
+        }
+    </script>
+</body>
+</html>

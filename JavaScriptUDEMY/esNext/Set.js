@@ -9,7 +9,7 @@ times.add("Vasco"); //Não será adicionado pois não aceita repetição (Será 
 
 console.log(times);
 console.log(times.size);//Assim como no Map, para ver o tamanho usa-se o size também
-console.log(times.has("Flamengo");//Assim como no Map, para ver se contém o elemento
+console.log(times.has("Flamengo"));//Assim como no Map, para ver se contém o elemento
 times.delete("Flamengo");//Assim como no Map, para remover o elemento usa-se o delete também
 
 

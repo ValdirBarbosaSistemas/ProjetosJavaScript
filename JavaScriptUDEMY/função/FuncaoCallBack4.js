@@ -1,12 +1,12 @@
 function rand(min = 1000, max = 3000) {
   const num = Math.random() * (max - min) + min;
-  return Math.floor(num);
+  return Math.floor(num);//funcao criada para gerar numeros aleatorios
 }
 
 function f1(callback) {
   setTimeout(function () {
     console.log("f1");
-    if (callback) callback();
+    if (callback) callback(); //se a callback fo passada no parametro, execute ela mesma
   }, rand());
 }
 

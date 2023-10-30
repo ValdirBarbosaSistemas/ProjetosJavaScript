@@ -17,7 +17,7 @@ console.log(`${produto} é caro`);
 //Destructuring
 
 const [l, e, ...tras] = "Cod3r";
-console.log(l, e, tras); //devido ao operador SPREAD, ele vai dividir o trecho d3r em ym array
+console.log(l, e, tras); //devido ao operador SPREAD, ele vai dividir o trecho d3r em um array
 
 const [x, , y] = [1, 2, 3];
 console.log(x, y); //Aqui ele vai imprimir 1 e 3
